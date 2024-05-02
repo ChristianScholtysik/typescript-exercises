@@ -5,3 +5,8 @@ import "./02_string_number_dom/dom.ts";
 import "./02_exercises/string.ts";
 import "./02_exercises/number.ts";
 import "./02_exercises/bonus.ts";
+import "./03_conditionals_math_date/math.ts";
+import "./03_conditionals_math_date/conditionals.ts";
+import "./03_conditionals_math_date/date.ts";
+import "./03_exercises/conditionals.ts";
+import "./03_exercises/date.ts";
