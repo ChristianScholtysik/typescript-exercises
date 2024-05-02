@@ -10,3 +10,4 @@ import "./03_conditionals_math_date/conditionals.ts";
 import "./03_conditionals_math_date/date.ts";
 import "./03_exercises/conditionals.ts";
 import "./03_exercises/date.ts";
+import "./03_exercises/math.ts";
