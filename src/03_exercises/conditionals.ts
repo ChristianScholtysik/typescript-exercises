@@ -10,9 +10,9 @@ console.log(num > anotherNum);
 console.log(num < anotherNum);
 console.log(num >= anotherNum);
 console.log(num <= anotherNum);
-console.log(num == "5");
+// console.log(num == "5");
 console.log(num != 8);
-console.log(num != "5");
+// console.log(num != "5");
 
 //!Conditionals-TS-Level-2_1
 
@@ -124,46 +124,51 @@ switch (schoolGrade) {
   case (schoolGrade = 6):
     console.log("ungenügend");
     break;
-  case (schoolGrade = 7):
-    console.log("Das ist keine gültige Schulnote.");
-    break;
-  case (schoolGrade = 8):
-    console.log("Das ist keine gültige Schulnote.");
-    break;
-  case (schoolGrade = 9):
-    console.log("Das ist keine gültige Schulnote.");
-    break;
-  case (schoolGrade = 10):
-    console.log("Das ist keine gültige Schulnote.");
-    break;
+  // case (schoolGrade = 7):
+  //   console.log("Das ist keine gültige Schulnote.");
+  //   break;
+  // case (schoolGrade = 8):
+  //   console.log("Das ist keine gültige Schulnote.");
+  //   break;
+  // case (schoolGrade = 9):
+  //   console.log("Das ist keine gültige Schulnote.");
+  //   break;
+  // case (schoolGrade = 10):
+  //   console.log("Das ist keine gültige Schulnote.");
+  //   break;
   default:
+    console.log("Das ist keine gültige Schulnote.");
     break;
 }
 
 //! Conditionals-TS-Level-3_1
 
 let salesMonth: number = Math.round(Math.random() * 12);
-
+let quarter;
 switch (salesMonth) {
-  case (salesMonth = 1):
-  case (salesMonth = 2):
-  case (salesMonth = 3):
+  case 1:
+  case 2:
+  case 3:
     console.log("1.Quartal");
+    quarter = "1.Quartal";
     break;
-  case (salesMonth = 4):
-  case (salesMonth = 5):
-  case (salesMonth = 6):
+  case 4:
+  case 5:
+  case 6:
     console.log("2.Quartal");
+    quarter = "2.Quartal";
     break;
-  case (salesMonth = 7):
-  case (salesMonth = 8):
-  case (salesMonth = 9):
+  case 7:
+  case 8:
+  case 9:
     console.log("3.Quartal");
+    quarter = "3.Quartal";
     break;
-  case (salesMonth = 10):
-  case (salesMonth = 11):
-  case (salesMonth = 12):
+  case 10:
+  case 11:
+  case 12:
     console.log("4.Quartal");
+    quarter = "4.Quartal";
     break;
   default:
     break;
@@ -180,22 +185,22 @@ switch (true) {
   case totalSales <= 2500:
     console.log("schlecht");
     sales = "schlecht";
-    console.log(`im ${salesMonth}.Quartal war der Umsatz ${sales}`);
+    console.log(`im ${quarter} war der Umsatz ${sales}`);
     break;
   case totalSales >= 2501 && totalSales <= 5000:
     console.log("mittelmäßig");
     sales = "mittelmäßig";
-    console.log(`im ${salesMonth}.Quartal war der Umsatz ${sales}`);
+    console.log(`im ${quarter} war der Umsatz ${sales}`);
     break;
   case totalSales >= 5001 && totalSales <= 7500:
     console.log("gut");
     sales = "gut";
-    console.log(`im ${salesMonth}.Quartal war der Umsatz ${sales}`);
+    console.log(`im ${quarter} war der Umsatz ${sales}`);
     break;
   case totalSales >= 7501 && totalSales <= 10000:
     console.log("unglaublich");
     sales = "unglaublich";
-    console.log(`im ${salesMonth}.Quartal war der Umsatz ${sales}`);
+    console.log(`im ${quarter} war der Umsatz ${sales}`);
     break;
 
   default:
@@ -210,12 +215,10 @@ const consoleMessage = isOnline2
   ? console.log("online")
   : console.log("offline");
 
-let monthlyFee: number;
+// let monthlyFee: number;
 const premiumUser: boolean = Math.random() <= 0.5;
-const premiumMessage = premiumUser
-  ? (monthlyFee = 19.99)
-  : (monthlyFee = 12.99);
-console.log({ premiumMessage });
+const monthlyFee = premiumUser ? 19.99 : 12.99;
+console.log({ monthlyFee });
 
 const isAdult: boolean = Math.random() <= 0.5;
 const adultMessage = isAdult
@@ -231,7 +234,8 @@ console.log({ isMiddleAged });
 
 const mySalary =
   randomSalary > 10000
-    ? console.log("You are rich")
+    ? "You are rich"
     : randomSalary > 1500
-    ? console.log("Not too bad")
-    : console.log("Not that much");
+    ? "Not too bad"
+    : "Not that much";
+console.log(mySalary);
