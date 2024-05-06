@@ -8,6 +8,11 @@
   </head>
   <body>
     <h1>Basketball</h1>
+    <div class="modalWindow">
+      <div id="team1"></div>
+      <div id="team2"></div>
+    </div>
+
     <div class="resultWindows">
       <div id="resultFieldHome">
         <fieldset>
@@ -18,24 +23,30 @@
       <div id="resultFieldAway">
         <fieldset>
           <div class="result away" id="counter_away"></div>
-          <!-- <div id="resultAway"></div> -->
+
           <legend>Away</legend>
         </fieldset>
       </div>
     </div>
     <div class="btn-row">
       <div class="column1">
-        <button id="button1-count1">+1</button><button>+2</button
-        ><button>+3</button>
+        <button id="button1-count1">+1</button
+        ><button id="button2-count2">+2</button
+        ><button id="button3-count3">+3</button>
       </div>
       <div class="column2">
-        <button>+1</button><button>+2</button><button>+3</button>
+        <button id="button4-count1">+1</button
+        ><button id="button5-count2">+2</button
+        ><button id="button6-count3">+3</button>
       </div>
     </div>
     <div class="reset">
-      <button>Reset</button>
+      <button id="reset">Reset</button>
+    </div>
+    <div class="teamName">
+      <button id="teamName">Add Teams Names</button>
     </div>
 
-    <script type="modul" src="./basketball.ts"></script>
+    <script type="module" src="./basketball.ts"></script>
   </body>
 </html>
