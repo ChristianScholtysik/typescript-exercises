@@ -15,3 +15,5 @@ import "./04_functions/functions.ts";
 import "./04_functions/scope.ts";
 import "./04_exercises/functions.ts";
 import "./04_exercises/basketball.ts";
+import "./05_arrays/array.ts";
+import "./05_exercises/array_exercise.ts";
