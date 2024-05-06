@@ -69,7 +69,7 @@ printPretty();
 
 //!!BonusBonus
 const buttonAdd5Items = document.getElementById("btn");
-const listOl = document.getElementById("list");
+const listOne = document.getElementById("list");
 if (buttonAdd5Items) {
   buttonAdd5Items.addEventListener("click", askForUserInput);
 } else {
@@ -85,7 +85,7 @@ function askForUserInput(event: MouseEvent) {
       toDoItems.unshift(item);
       const listItem = document.createElement("li");
       listItem.appendChild(document.createTextNode(item));
-      listOl.appendChild(listItem);
+      listOne.appendChild(listItem);
     });
     console.log("To-Do items:", toDoItems);
   } else {
