@@ -18,3 +18,6 @@ import "./04_exercises/basketball.ts";
 import "./05_arrays/array.ts";
 import "./05_exercises/array_exercise.ts";
 import "./05_exercises/array_bonus.ts";
+import "./06_arrays/array.ts";
+import "./06_arrays/sort.ts";
+import " ./";
