@@ -57,6 +57,7 @@ console.log(europeanCountries.reverse());
 //! Array-TS-Sort-Level-1_3 (sort)
 
 let numArray1: number[] = [36, 24, 22, 3, 2, 98, 88, 99, 10, 54, 68, 70];
+let stringArray2: string[] = ["36", "24", "22", " 3", "2"];
 
 function sortAsc(a: number, b: number) {
   return a - b;
@@ -64,7 +65,7 @@ function sortAsc(a: number, b: number) {
 function sortDesc(a: number, b: number) {
   return b - a;
 }
-console.log(numArray1.sort(sortAsc));
+console.log(numArray1.sort());
 console.log(numArray1.sort(sortDesc));
 
 //! Array-TS-Sort-Level-2_1
@@ -219,7 +220,7 @@ function searchArt(artworkName: string) {
       `'${artworksInfo[0]}' wurde von ${artworksInfo[1]} im Jahre ${artworksDatesInfo[1]} gemalt`
     );
   } else {
-    console.log(`Artwork '${artworkName}' not found`);
+    console.log(`Artwork ${artworkName} not found`);
   }
 }
 

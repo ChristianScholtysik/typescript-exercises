@@ -39,3 +39,26 @@ console.log(fruitsAndVegetables);
 
 const fruitsAndVeggiesWithSpread: string[] = [...fruits, ...vegetables];
 console.log(fruitsAndVeggiesWithSpread);
+
+// * find methode
+
+const oldies: string[] = [
+  "The Beatles-Let it be",
+  "The Rolling Stones -Angie",
+  "Elvis Presley - Suspicious Minds",
+];
+
+const beatles = oldies.find(
+  (oldie: string) => oldie === "The Beatles - Let it be"
+);
+console.log(beatles);
+
+const startsWithElvis = oldies.find((oldie: string) =>
+  oldie.startsWith("Elvis")
+);
+console.log(startsWithElvis);
+if (startsWithElvis) {
+  const artistAndTitle = startsWithElvis.split(" - ");
+  console.log(artistAndTitle[0]);
+  console.log(artistAndTitle[1]);
+}
