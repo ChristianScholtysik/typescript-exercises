@@ -48,10 +48,10 @@ const oldies: string[] = [
   "Elvis Presley - Suspicious Minds",
 ];
 
-const beatles = oldies.find(
+const beatles2 = oldies.find(
   (oldie: string) => oldie === "The Beatles - Let it be"
 );
-console.log(beatles);
+console.log(beatles2);
 
 const startsWithElvis = oldies.find((oldie: string) =>
   oldie.startsWith("Elvis")

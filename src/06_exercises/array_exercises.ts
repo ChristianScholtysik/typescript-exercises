@@ -131,6 +131,7 @@ const copyOfFemalePaintersWithSpreadOperator: string[] = [
   ...newerFemalePainters,
 ];
 console.log(copyOfFemalePaintersWithSpreadOperator);
+
 //-----------------
 let malePainters: string[] = [];
 let newerMalePainters = newerPainters.slice(0, 2);
