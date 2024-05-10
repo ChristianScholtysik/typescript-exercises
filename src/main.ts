@@ -21,8 +21,9 @@
 // import "./06_arrays/array.ts";
 // import "./06_arrays/sort.ts";
 // import "./06_exercises/array_exercises";
-import "./06_exercises/Meal-Planner.ts";
-import "./07_arrays/array_search.ts";
-import "./07_arrays/map_forEach.ts";
-import "./07_arrays/two-dimensional.ts";
-import "./07_exercises/arrays.ts";
+// import "./06_exercises/Meal-Planner.ts";
+// import "./07_arrays/array_search.ts";
+// import "./07_arrays/map_forEach.ts";
+// import "./07_arrays/two-dimensional.ts";
+// import "./07_exercises/arrays.ts";
+import "./08_loops/loops";
