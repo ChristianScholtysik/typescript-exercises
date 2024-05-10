@@ -10,20 +10,22 @@
     <h1>Meal Planner</h1>
     <form action="">
       <div id="input-wrap">
-        <input type="text" placeholder="Enter meal name" id="inputField" />
-        <button type="submit" id="btn">Add Meal</button>
+        <input type="text" placeholder="Enter meal name" id="mealName" />
+        <button type="submit" id="addMeal">Add Meal</button>
       </div>
+      <label for="weekSelector">Select Week:</label>
       <select name="week" id="weekSelector">
-        <option value="0" id="week1">Week 1</option>
-        <option value="1" id="week2">Week 2</option>
-        <option value="2" id="week3">Week 3</option>
-        <option value="3" id="week4">Week 4</option>
+        <option value="1" id="week1">Week 1</option>
+        <option value="2" id="week2">Week 2</option>
+        <option value="3" id="week3">Week 3</option>
+        <option value="4" id="week4">Week 4</option>
       </select>
     </form>
-    <ul id="currentWeek">
-      <h2></h2>
-      <li></li>
-    </ul>
+    <h2>Meals for Selected Week:</h2>
+    <ul id="mealList"></ul>
+
+    <h2>All Weeks:</h2>
+    <div id="allWeeks"></div>
     <script type="module" src="./Meal-Planner.ts"></script>
   </body>
 </html>
