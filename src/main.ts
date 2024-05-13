@@ -26,4 +26,8 @@
 // import "./07_arrays/map_forEach.ts";
 // import "./07_arrays/two-dimensional.ts";
 // import "./07_exercises/arrays.ts";
-import "./08_loops/loops";
+// import "./08_loops/loops";
+// import "./08_exercises/loops";
+// import "./09_loops/loops";
+// import "./09_loops/break-continue";
+import "./09_exercises/loops";
