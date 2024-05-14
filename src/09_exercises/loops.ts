@@ -164,3 +164,27 @@ const resultOfClass = averagePoints([44, 11, 80, 52, 88, 94, 3, 25, 46]);
 const resultOfClass2 = averagePoints([
   100, 32, 98, 71, 24, 52, 60, 33, 100, 95, 66,
 ]);
+
+//! FizzBuzz
+// Schreibe eine Funktion, die die Zahlen von 1 bis 100 zurückgibt. Manche Zahlen sollen dabei allerdings übersetzt werden [1]:
+
+// Für Vielfache von 3 gibt „Fizz“ aus.
+// Für Vielfache von 5 gib „Buzz“ aus.
+// Für Vielfache von 3 und 5 gib „FizzBuzz“ aus.
+function fizzBuzz(): string[] {
+  const result = [];
+  for (let index = 0; index <= 100; index++) {
+    if (index % 3 === 0 && index % 5 === 0) {
+      result.push("FizzBuzz");
+    } else if (index % 3 === 0) {
+      result.push("Fizz");
+    } else if (index % 5 === 0) {
+      result.push("Buzz");
+    } else {
+      result.push(index.toString());
+    }
+  }
+  return result;
+}
+
+console.log(fizzBuzz());
