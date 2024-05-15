@@ -32,5 +32,7 @@
 // import "./09_loops/break-continue";
 // import "./09_exercises/loops";
 // import "./10_loops/loops";
-import "./11_objects/objects";
-import "./11_objects/math";
+// import "./11_objects/objects";
+// import "./11_objects/math";
+import "./11_exercises/objects";
+import "./11_exercises/bonus";
