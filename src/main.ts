@@ -30,4 +30,6 @@
 // import "./08_exercises/loops";
 // import "./09_loops/loops";
 // import "./09_loops/break-continue";
-import "./09_exercises/loops";
+// import "./09_exercises/loops";
+// import "./10_loops/loops";
+import "./11_objects/objects";
