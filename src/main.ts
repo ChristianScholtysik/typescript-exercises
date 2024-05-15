@@ -33,3 +33,4 @@
 // import "./09_exercises/loops";
 // import "./10_loops/loops";
 import "./11_objects/objects";
+import "./11_objects/math";
