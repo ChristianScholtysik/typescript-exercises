@@ -395,7 +395,3 @@ const sortedSingers = singers.sort((a, b) => {
   return 0;
 });
 console.log({ sortedSingers });
-
-//! BONUS -------------------------
-
-//! Objekte-TS-Level-2_5

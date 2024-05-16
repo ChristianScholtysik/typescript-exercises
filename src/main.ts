@@ -34,5 +34,10 @@
 // import "./10_loops/loops";
 // import "./11_objects/objects";
 // import "./11_objects/math";
-import "./11_exercises/objects";
-import "./11_exercises/bonus";
+// import "./11_exercises/objects";
+// import "./11_exercises/bonus";
+// import "./12_special objects/recap";
+// import "./12_special objects/objects";
+// import "./12_special objects/enum";
+// import "./12_special objects/specialObjects";
+import "./12_exercises/objects";

@@ -109,10 +109,10 @@ function renderResultSingersTwo(singersToRender: SingerTwo[]): void {
 
       singerContainer.appendChild(createParagraph("Country", singer.country));
       singerContainer.appendChild(
-        createParagraph("started", singer.period_active.start)
+        createParagraph("started", singer.period_active.start.toString())
       );
       singerContainer.appendChild(
-        createParagraph("ended", singer.period_active.end)
+        createParagraph("ended", singer.period_active.end.toString())
       );
       singerContainer.appendChild(createParagraph("Genre", singer.genre));
 
