@@ -58,13 +58,13 @@ enum Weekday2 {
   Saturday,
   Sunday,
 }
-console.log(Weekday2[0]);
-console.log(Weekday2[1]);
-console.log(Weekday2[2]);
-console.log(Weekday2[3]);
-console.log(Weekday2[4]);
-console.log(Weekday2[5]);
-console.log(Weekday2[6]);
+// console.log(Weekday2[0]);
+// console.log(Weekday2[1]);
+// console.log(Weekday2[2]);
+// console.log(Weekday2[3]);
+// console.log(Weekday2[4]);
+// console.log(Weekday2[5]);
+// console.log(Weekday2[6]);
 
 enum Month {
   January,
@@ -81,19 +81,24 @@ enum Month {
   December,
 }
 
-console.log("Months: ");
-console.log(Month[0]);
-console.log(Month[1]);
-console.log(Month[2]);
-console.log(Month[3]);
-console.log(Month[4]);
-console.log(Month[5]);
-console.log(Month[6]);
-console.log(Month[7]);
-console.log(Month[8]);
-console.log(Month[9]);
-console.log(Month[10]);
-console.log(Month[11]);
+// console.log("Months: ");
+// console.log(Month[0]);
+// console.log(Month[1]);
+// console.log(Month[2]);
+// console.log(Month[3]);
+// console.log(Month[4]);
+// console.log(Month[5]);
+// console.log(Month[6]);
+// console.log(Month[7]);
+// console.log(Month[8]);
+// console.log(Month[9]);
+// console.log(Month[10]);
+// console.log(Month[11]);
+//? Nochmal neu mit for Schleife
+
+for (const month in Month) {
+  console.log("Months: ", Month[month]);
+}
 
 //! Enum-TS-Level-1_2
 // - Definiere ein Enum PizzaSize mit den Größen Small, Medium, Large, Familie
