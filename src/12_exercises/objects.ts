@@ -208,12 +208,14 @@ function getColorName(color: ClothingColor): string {
 
 console.log(allColors);
 const container = document.getElementById("color-buttons-container");
+// Funktion zurm erstellen der Buttons mit ihren jeweiligen Farbwerten und dem Farbnamen auf dem button
+
 function createColorButtons() {
   if (container) {
     allColors.forEach((color) => {
       const button = document.createElement("button");
-      button.textContent = getColorName(color);
-      button.style.backgroundColor = color;
+      button.textContent = getColorName(color); // Holt den Farbnamen aus der Funktion getColorName
+      button.style.backgroundColor = color; //nimmt den HexWert aus dem Enum
       document.body.appendChild(button);
     });
   }
