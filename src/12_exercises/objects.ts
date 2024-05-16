@@ -185,13 +185,34 @@ const allColors: ClothingColor[] = [
   ClothingColor.Lila,
   ClothingColor.Grau,
 ];
+
+// Funktion zur Rückgabe des Namens der Farbe basierend auf dem Enumwert
+function getColorName(color: ClothingColor): string {
+  switch (color) {
+    case ClothingColor.Gelb:
+      return "Gelb";
+    case ClothingColor.Orange:
+      return "Orange";
+    case ClothingColor.Pink:
+      return "Pink";
+    case ClothingColor.Blau:
+      return "Blau";
+    case ClothingColor.Lila:
+      return "Lila";
+    case ClothingColor.Grau:
+      return "Grau";
+    default:
+      return "";
+  }
+}
+
 console.log(allColors);
 const container = document.getElementById("color-buttons-container");
 function createColorButtons() {
   if (container) {
     allColors.forEach((color) => {
       const button = document.createElement("button");
-      button.textContent = color;
+      button.textContent = getColorName(color);
       button.style.backgroundColor = color;
       document.body.appendChild(button);
     });
