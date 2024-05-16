@@ -255,4 +255,94 @@ favoriteBands.set("Metallica", [
 ]);
 console.log(favoriteBands.size);
 console.log(favoriteBands.get("Pink Floyd"));
-console.log(favoriteBands.get("Pink Floyd")[1]);
+const pinkFloydArray = favoriteBands.get("Pink Floyd");
+if (pinkFloydArray) {
+  console.log(pinkFloydArray[3]);
+}
+
+//! BONUS----------------------------------
+
+//! Map-TS-Level-2_1
+// - Wir bauen auf der Aufgabe der Lieblingsbands auf
+// - Prüfe, ob die Band “Metallica” in der Map enthalten ist
+// - Lege einen doppelten Eintrage an, also einen Bandnamen (=Key), den du bereits verwendet hast mit anderen Mitgliedern
+// - Hole dir den Eintrag mit get aus der Map aus lasse ihn auf der Konsole ausgeben
+// - Welchen Eintrag bekommst du zurück? Schreibe es als Kommentar in deinen Code
+
+if (favoriteBands.has("Metallica")) {
+  console.log("Es gibt Metallica");
+}
+
+favoriteBands.set("Metallica", ["Ice Cube", "Dr. Dre", "Eazy-E", "MC Ren"]);
+console.log(favoriteBands.get("Metallica"));
+//["Ice Cube", "Dr. Dre", "Eazy-E", "MC Ren"]
+
+//!Set-TS-Level-2_1
+// - Erstelle ein Array vom Typ String mit Marvel-Charakteren: Iron Man, Captain America, Thor, Hulk, Black Widow, Spider Man
+// - Füge in das Array nochmal Iron Man und Thor hinten hinzu
+// - Lass dir den Inhalt des Arrays auf der Konsole ausgeben
+// - Erstelle ein neues Set, dass das Array als Basis hat
+// - Lass dir den Inhalt des Sets auf der Konsole ausgeben
+// - Was fällt auf?
+
+const marvelCharcters: string[] = [
+  "Iron Man",
+  "Captain America",
+  "Thor",
+  "Hulk",
+  "Black Widow",
+  "Spider Man",
+];
+console.log(marvelCharcters);
+marvelCharcters.push("Iron Man");
+marvelCharcters.push("Thor");
+console.log(marvelCharcters);
+
+const marvelCharctersSet = new Set<string>(marvelCharcters);
+console.log(marvelCharctersSet);
+marvelCharctersSet.add("Iron Man");
+marvelCharctersSet.add("Thor");
+console.log(marvelCharctersSet);
+// Es gibt im set keine doppelten Einträge, im Array schon
+
+//! Map-TS-Level-3_1
+
+// Wir bauen weiterhin auf der Aufgabe der Map der Lieblingsbands auf
+// Lass dir alle Mitglieder auf der Konsole ausgeben, deren Name länger als 12 Zeichen (inkl. Leerzeichen) ist
+// Beispiel für eine Zeile in der Ausgabe:
+// Band: Metallica, Member: Robert Trujillo, Length: 15
+
+function getAllMembersLongerThan12() {
+  favoriteBands.forEach((members, band) => {
+    members.forEach((member) => {
+      if (member.length > 12) {
+        console.log(
+          `Band: ${band}, Member: ${member}, Length: ${member.length}`
+        );
+      }
+    });
+  });
+}
+getAllMembersLongerThan12();
+
+//! Enum-TS-Level-3_1
+
+// - Erstelle ein Enum BasicShape mit den Werten Square, Circle und Triangle und Reactangle
+// - Erstelle ein weiteres Enum ExtendedShape mit den Werten Ellipse, Rhombus
+// - Das Enum ExtendedShape soll auch die Werte von Basic-Shape enthalten ohne dass du sie kopierst
+
+enum BasicShape {
+  "Square",
+  "Circle",
+  "Triangle",
+  "Reactangle",
+}
+
+enum ExtendedShape {
+  "Ellipse",
+  " Rhombus",
+  BasicShape,
+}
+
+console.log(ExtendedShape);
+console.log(BasicShape);
