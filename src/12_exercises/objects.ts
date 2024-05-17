@@ -145,7 +145,8 @@ enum HtmlError {
 }
 function showHtmlError() {
   const randomNum = Math.floor(Math.random() * 5) + 1;
-  if (randomNum === 0 || randomNum === 1 || randomNum === 2) {
+  //   if (randomNum === 0 || randomNum === 1 || randomNum === 2) {
+  if (randomNum <= 2) {
     console.log(HtmlError.Ok);
   } else if (randomNum === 3) {
     console.log(HtmlError.Redirect);
