@@ -40,4 +40,8 @@
 // import "./12_special objects/objects";
 // import "./12_special objects/enum";
 // import "./12_special objects/specialObjects";
-import "./12_exercises/objects";
+// import "./12_exercises/objects";
+// import "./13_flowcharts/recap";
+// import "./13_flowcharts/undefined_null_any";
+import "./14_dom/fruits";
+import "./14_exercises/dom";

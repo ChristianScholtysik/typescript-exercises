@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>DOM Exercises</title>
+  </head>
+  <body>
+    <main>
+      <input type="text" name="" id="input-field" />
+      <button id="input-button">Text hinzufügen</button>
+      <div id="result-output"></div>
+      <section>
+        <div id="info"></div>
+        <div id="container">
+          <input id="input" />
+        </div>
+      </section>
+      <section id="gallery"></section>
+
+      <section>
+        <h1>Meine Einkaufsliste</h1>
+
+        <input type="text" id="inputText" placeholder="Ich benötige..." />
+        <button id="add-button">Hinzufügen</button>
+        <div id="error-message"></div>
+        <ul id="myList">
+          <!-- Hier werden die dynamisch hinzugefügten Elemente erscheinen -->
+        </ul>
+      </section>
+      <section>
+        <div class="style">
+          <div class="example">Ein div mit class="example".</div>
+
+          <div class="example">Ein weiteres div mit class="example".</div>
+
+          <p class="example">Dies ist ein p-Element mit class="example"</p>
+
+          <p>
+            Dies ist ein <span class="example">span</span> Element mit
+            class="example" in einem anderen p-Element.
+          </p>
+
+          <p>
+            Klicken Sie auf die Button, um die Hintergrundfarbe aller Elemente
+            mit class="example" zu ändern.
+          </p>
+
+          <button class="example" id="color-change-button">
+            Versuchen Sie es
+          </button>
+        </div>
+      </section>
+    </main>
+    <script type="module" src="./dom.ts"></script>
+  </body>
+</html>
