@@ -43,5 +43,7 @@
 // import "./12_exercises/objects";
 // import "./13_flowcharts/recap";
 // import "./13_flowcharts/undefined_null_any";
-import "./14_dom/fruits";
-import "./14_exercises/dom";
+// import "./14_dom/fruits";
+// import "./14_exercises/dom";
+// import "./15_dom/events";
+import "./15_exercises/dom";
