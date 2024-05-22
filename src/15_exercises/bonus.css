@@ -1,0 +1,51 @@
+#btn-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(212, 212, 212);
+
+  gap: 1rem;
+}
+
+.output {
+  background-color: wheat;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.btn {
+  background-color: rgb(169, 230, 239);
+  padding: 1rem 2rem;
+}
+
+#result-output {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20rem;
+  height: 10rem;
+  background-color: rgb(212, 212, 212);
+  font-size: 8rem;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
+  height: 18rem;
+  background-color: rgb(212, 212, 212);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}

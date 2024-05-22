@@ -1,0 +1,15 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  background: #1db0e1;
+  color: #eef5b2;
+}
+
+button {
+  padding: 5px;
+  margin: 5px;
+  border-radius: 5px;
+  background: #086e70;
+  color: #eef5b2;
+  font-weight: bold;
+}

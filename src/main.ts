@@ -47,3 +47,5 @@
 // import "./14_exercises/dom";
 // import "./15_dom/events";
 import "./15_exercises/dom";
+import "./15_exercises/bonus";
+import "./15_exercises/bonus2";
