@@ -37,10 +37,15 @@ secondFunction(3, 7);
 // }
 // thirdFunction(3, 5);
 
-function fourthFunction(firstName: string, lastName: string) {
-  console.log(`fourth: ${firstName} ${lastName}`);
+// function fourthFunction(firstName: string, lastName: string) {
+//   console.log(`fourth: ${firstName} ${lastName}`);
+// }
+// fourthFunction("Billie", "Jean");
+
+function printKeys(object: Object): void {
+  console.log(Object.keys(object));
 }
-fourthFunction("Billie", "Jean");
+printKeys({ firstName: "Manny", lastName: "Müller" });
 
 //? Arrow funktionen
 const firstFunctionArrow: () => void = () => {
@@ -198,111 +203,157 @@ console.log(dragon);
 //     - das Ergebnis von greetNewUserVar1 wird auf die Konsole geloggt
 //     - das Ergebnis von greetNewUserVar2 wird im HTML unterhalb des Submit-Buttons ausgegeben
 //? Element holen
-const submitButton = document.getElementById("submit-btn") as HTMLInputElement;
-const emailInput = document.getElementById("email") as HTMLInputElement;
-const phoneInput = document.getElementById("phone") as HTMLInputElement;
-const firstnameInput = document.getElementById("firstname") as HTMLInputElement;
-const lastnameInput = document.getElementById("lastname") as HTMLInputElement;
-const resultField = document.getElementById("result") as HTMLElement;
+// const submitButton = document.getElementById("submit-btn") as HTMLInputElement;
+// const emailInput = document.getElementById("email") as HTMLInputElement;
+// const phoneInput = document.getElementById("phone") as HTMLInputElement;
+// const firstnameInput = document.getElementById("firstname") as HTMLInputElement;
+// const lastnameInput = document.getElementById("lastname") as HTMLInputElement;
+// const resultField = document.getElementById("result") as HTMLElement;
 
-//? Type
+// //? Type
 
-type NewCustomer2 = {
-  firstName: string;
-  lastName: string;
-  email?: string;
-  phone?: string;
+// type NewCustomer2 = {
+//   firstName: string;
+//   lastName: string;
+//   email?: string;
+//   phone?: string;
+// };
+
+// //? EventHandler
+// submitButton.addEventListener("click", (event) => {
+//   event.preventDefault();
+//   const firstName = firstnameInput?.value;
+//   const lastName = lastnameInput?.value;
+//   const email = emailInput.value;
+//   const phone = phoneInput.value;
+//   if (firstName && lastName) {
+//     if (email && phone) {
+//       const newUser = greetNewUserVar1();
+//       console.log(newUser);
+//     } else if (email && !phone) {
+//       const newUser = greetNewUserVar2();
+//       console.log(newUser);
+//     } else if (phone && !email) {
+//       const newUser = greetNewUserVar3();
+//       console.log(newUser);
+//     } else if (!phone && !email) {
+//       const newUser = greetNewUserVar4();
+//       console.log(newUser);
+//     }
+//   }
+// });
+// //? Functions
+
+// function greetNewUserVar1(): NewCustomer2 {
+//   const firstName = firstnameInput?.value;
+//   const lastName = lastnameInput?.value;
+//   const email = emailInput?.value;
+//   const phone = phoneInput?.value;
+//   if (resultField) {
+//     const result = document.createElement("p");
+//     result.innerHTML = `Hello ${firstName} ${lastName}. We will contact you via ${email} and ${phone}`;
+//     resultField.appendChild(result);
+
+//     alert(
+//       `Hello ${firstName} ${lastName}. We will contact you via ${email} and ${phone}`
+//     );
+//     return {
+//       firstName,
+//       lastName,
+//       email,
+//       phone,
+//     };
+//   }
+// }
+// function greetNewUserVar2() {
+//   if (resultField) {
+//     const firstName = firstnameInput?.value;
+
+//     const lastName = lastnameInput?.value;
+//     const email = emailInput?.value;
+//     const result = document.createElement("p");
+//     result.innerHTML = `Hello ${firstName} ${lastName}. We will contact you via ${email}`;
+//     resultField.appendChild(result);
+//     alert(`Hello ${firstName} ${lastName}. We will contact you via ${email}`);
+//     return {
+//       firstName,
+//       lastName,
+//       email,
+//     };
+//   }
+// }
+// function greetNewUserVar3() {
+//   const firstName = firstnameInput?.value;
+
+//   const lastName = lastnameInput?.value;
+//   const phone = phoneInput?.value;
+//   if (resultField) {
+//     const result = document.createElement("p");
+//     result.innerHTML = `Hello ${firstName} ${lastName}. We will contact you via ${phone}`;
+//     resultField.appendChild(result);
+
+//     alert(`Hello ${firstName} ${lastName}. We will contact you via ${phone}`);
+//     return {
+//       firstName,
+//       lastName,
+//       phone,
+//     };
+//   }
+// }
+// function greetNewUserVar4() {
+//   const firstName = firstnameInput?.value;
+
+//   const lastName = lastnameInput?.value;
+
+//   alert(`Hello ${firstName} ${lastName}. We will not contact you `);
+//   return {
+//     firstName,
+//     lastName,
+//   };
+// }
+
+//! Bonus: Functions-TS-Level-3_1
+// - Erstelle vier SuperBalls: Durch das Anklicken eines SuperBalls ändert sich die Hintergrundfarbe des <body> und die Textfarbe der Überschrift <h1>.
+// - Nutze CSS um die Elemente zu stylen. Entweder nutzt du linear-gradient oder du sprichst jeden Halbkreis selber an.
+// - In deinem TS-Code definierst du dann was beim Klick auf den jeweiligen SuperBall passieren soll.
+
+type SuperBalls = {
+  ball: HTMLElement;
+  backgroundColor: string;
+  textColor: string;
 };
 
-//? EventHandler
-submitButton.addEventListener("click", (event) => {
-  event.preventDefault();
-  const firstName = firstnameInput?.value;
-  const lastName = lastnameInput?.value;
-  const email = emailInput.value;
-  const phone = phoneInput.value;
-  if (firstName && lastName) {
-    if (email && phone) {
-      const newUser = greetNewUserVar1();
-      console.log(newUser);
-    } else if (email && !phone) {
-      const newUser = greetNewUserVar2();
-      console.log(newUser);
-    } else if (phone && !email) {
-      const newUser = greetNewUserVar3();
-      console.log(newUser);
-    } else if (!phone && !email) {
-      const newUser = greetNewUserVar4();
-      console.log(newUser);
+//?
+const createSuperBall = (
+  id: string,
+  bgColor: string,
+  textColor: string
+): void => {
+  const ball = document.getElementById(id);
+
+  const title = document.querySelector("h1");
+  if (ball) {
+    const superBall: SuperBalls = {
+      ball: ball,
+      backgroundColor: bgColor,
+      textColor: textColor,
+    };
+
+    // const backgroundColorGradient =
+    //   "linear-gradient(backgoundColor, textColor)";
+
+    ball?.addEventListener("click", () => {
+      // document.body.style.background = superBall.backgroundColorGradient;
+      document.body.style.background = superBall.backgroundColor;
+    });
+    if (title) {
+      document.body.style.color = superBall.textColor;
     }
   }
-});
-//? Functions
+};
 
-function greetNewUserVar1(): NewCustomer2 {
-  const firstName = firstnameInput?.value;
-  const lastName = lastnameInput?.value;
-  const email = emailInput?.value;
-  const phone = phoneInput?.value;
-  if (resultField) {
-    const result = document.createElement("p");
-    result.innerHTML = `Hello ${firstName} ${lastName}. We will contact you via ${email} and ${phone}`;
-    resultField.appendChild(result);
-
-    alert(
-      `Hello ${firstName} ${lastName}. We will contact you via ${email} and ${phone}`
-    );
-    return {
-      firstName,
-      lastName,
-      email,
-      phone,
-    };
-  }
-}
-function greetNewUserVar2() {
-  if (resultField) {
-    const firstName = firstnameInput?.value;
-
-    const lastName = lastnameInput?.value;
-    const email = emailInput?.value;
-    const result = document.createElement("p");
-    result.innerHTML = `Hello ${firstName} ${lastName}. We will contact you via ${email}`;
-    resultField.appendChild(result);
-    alert(`Hello ${firstName} ${lastName}. We will contact you via ${email}`);
-    return {
-      firstName,
-      lastName,
-      email,
-    };
-  }
-}
-function greetNewUserVar3() {
-  const firstName = firstnameInput?.value;
-
-  const lastName = lastnameInput?.value;
-  const phone = phoneInput?.value;
-  if (resultField) {
-    const result = document.createElement("p");
-    result.innerHTML = `Hello ${firstName} ${lastName}. We will contact you via ${phone}`;
-    resultField.appendChild(result);
-
-    alert(`Hello ${firstName} ${lastName}. We will contact you via ${phone}`);
-    return {
-      firstName,
-      lastName,
-      phone,
-    };
-  }
-}
-function greetNewUserVar4() {
-  const firstName = firstnameInput?.value;
-
-  const lastName = lastnameInput?.value;
-
-  alert(`Hello ${firstName} ${lastName}. We will not contact you `);
-  return {
-    firstName,
-    lastName,
-  };
-}
+//?
+// createSuperBall("superBall1", "purple", "yellow");
+// createSuperBall("superBall2", "green", "pink");
+// createSuperBall("superBall3", "orange", "cyan");
+// createSuperBall("superBall4", "magenta", "blue");
