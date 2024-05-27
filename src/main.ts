@@ -53,3 +53,5 @@
 // import "./17_exercises/functions2";
 import "./18_modules/customer";
 import "./18_exercises/app";
+import "./18_bonus/app";
+import "./18_bonus/books";
