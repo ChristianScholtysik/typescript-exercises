@@ -14,21 +14,21 @@
 import { Fiction, NonFiction, ScienceFiction } from "./books";
 
 // Fiction Bücher hinzufügen und anzeigen
-Fiction.addBook("Der große Gatsby");
+Fiction.addBook("Faust");
 Fiction.addBook("To Kill a Mockingbird");
 Fiction.displayAllBooks();
 
 // Fiction Buch entfernen und anzeigen
-Fiction.removeBook("Der große Gatsby");
+Fiction.removeBook("Faust");
 Fiction.displayAllBooks();
 
 // NonFiction Bücher hinzufügen und anzeigen
-NonFiction.addBook("Sapiens");
+NonFiction.addBook("Darm mit Charme");
 NonFiction.addBook("Die Wanderhure");
 NonFiction.displayAllBooks();
 
 // NonFiction Buch entfernen und anzeigen
-NonFiction.removeBook("Sapiens");
+NonFiction.removeBook("Darm mit Charme");
 NonFiction.displayAllBooks();
 
 // ScienceFiction Bücher hinzufügen und anzeigen
