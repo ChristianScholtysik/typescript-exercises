@@ -1,0 +1,27 @@
+#superBalls {
+  display: flex;
+  gap: 5rem;
+  margin: 2rem 2rem;
+}
+
+.super-ball {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 8rem;
+}
+
+body {
+  background: no-repeat;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: auto;
+}

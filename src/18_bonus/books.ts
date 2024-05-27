@@ -23,7 +23,7 @@ export namespace Fiction {
     console.log("Fiction Bücher:", books);
   }
 }
-
+//?
 export namespace NonFiction {
   const maxBooks = 10;
   let books: string[] = [];
@@ -49,7 +49,7 @@ export namespace NonFiction {
     console.log("NonFiction Bücher:", books);
   }
 }
-
+//?
 export namespace ScienceFiction {
   const maxBooks = 10;
   let books: string[] = [];

@@ -330,7 +330,7 @@ const createSuperBall = (
   textColor: string
 ): void => {
   const ball = document.getElementById(id);
-
+  const ballField = document.getElementById("superBalls") as HTMLElement;
   const title = document.querySelector("h1");
   if (ball) {
     const superBall: SuperBalls = {
@@ -338,22 +338,25 @@ const createSuperBall = (
       backgroundColor: bgColor,
       textColor: textColor,
     };
+    //* ohne hard line
+    ball.style.background = `linear-gradient(50deg,${superBall.backgroundColor}, ${superBall.textColor} )`;
+    //* mit hard-line
+    // ball.style.background = `linear-gradient(50deg, ${superBall.backgroundColor} 0%, ${superBall.backgroundColor} 50%, ${superBall.textColor} 50%, ${superBall.textColor} 100%)`;
 
-    // const backgroundColorGradient =
-    //   "linear-gradient(backgoundColor, textColor)";
+    if (ballField) {
+      ball?.addEventListener("click", () => {
+        document.body.style.background = `linear-gradient(230deg,${superBall.backgroundColor}, ${superBall.textColor})`;
+      });
 
-    ball?.addEventListener("click", () => {
-      // document.body.style.background = superBall.backgroundColorGradient;
-      document.body.style.background = superBall.backgroundColor;
-    });
-    if (title) {
-      document.body.style.color = superBall.textColor;
+      if (title) {
+        document.body.style.color = superBall.textColor;
+      }
     }
   }
 };
-
+document.body.style.background = "white";
 //?
-// createSuperBall("superBall1", "purple", "yellow");
-// createSuperBall("superBall2", "green", "pink");
-// createSuperBall("superBall3", "orange", "cyan");
-// createSuperBall("superBall4", "magenta", "blue");
+createSuperBall("superBall1", "purple", "yellow");
+createSuperBall("superBall2", "blue", "magenta");
+createSuperBall("superBall3", "orange", "red");
+createSuperBall("superBall4", "lightgreen", "orchid");
