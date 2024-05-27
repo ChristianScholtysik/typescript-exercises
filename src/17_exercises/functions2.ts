@@ -317,46 +317,58 @@ console.log(dragon);
 // - Nutze CSS um die Elemente zu stylen. Entweder nutzt du linear-gradient oder du sprichst jeden Halbkreis selber an.
 // - In deinem TS-Code definierst du dann was beim Klick auf den jeweiligen SuperBall passieren soll.
 
+//? Definiere ein Interface, um die Struktur der SuperBalls zu definieren.
 type SuperBalls = {
-  ball: HTMLElement;
-  backgroundColor: string;
-  textColor: string;
+  ball: HTMLElement; // Die HTML-Elementreferenz des Balls.
+  backgroundColor: string; // Die Hintergrundfarbe des Balls.
+  textColor: string; // Die Textfarbe des Balls.
 };
 
-//?
+//? Funktion, um einen SuperBall zu erstellen.
 const createSuperBall = (
-  id: string,
-  bgColor: string,
-  textColor: string
+  id: string, // Die ID des HTML-Elements des Balls.
+  bgColor: string, // Die Hintergrundfarbe des Balls.
+  textColor: string // Die Textfarbe des Balls.
 ): void => {
+  //? Hole die HTML-Elemente
   const ball = document.getElementById(id);
   const ballField = document.getElementById("superBalls") as HTMLElement;
   const title = document.querySelector("h1");
+
+  // Überprüfe, ob das Ball-Element gefunden wurde.
   if (ball) {
+    //? Erstelle ein SuperBalls-Objekt mit den übergebenen Parametern.
     const superBall: SuperBalls = {
       ball: ball,
       backgroundColor: bgColor,
       textColor: textColor,
     };
+
+    // Setze den Hintergrund des Balls auf einen Farbverlauf basierend auf den übergebenen Farben.
     //* ohne hard line
     ball.style.background = `linear-gradient(50deg,${superBall.backgroundColor}, ${superBall.textColor} )`;
-    //* mit hard-line
+    //* mit hard line
     // ball.style.background = `linear-gradient(50deg, ${superBall.backgroundColor} 0%, ${superBall.backgroundColor} 50%, ${superBall.textColor} 50%, ${superBall.textColor} 100%)`;
 
+    //? Füge einen Eventlistener hinzu, um die Hintergrundfarbe des Dokuments beim Klicken auf den Ball zu ändern.
     if (ballField) {
       ball?.addEventListener("click", () => {
         document.body.style.background = `linear-gradient(230deg,${superBall.backgroundColor}, ${superBall.textColor})`;
       });
 
+      //? Ändere die Textfarbe des Dokumenttitels entsprechend der Textfarbe des Balls.
       if (title) {
         document.body.style.color = superBall.textColor;
       }
     }
   }
 };
+
+//? Setze den Hintergrund der gesamten Seite auf Weiß.
 document.body.style.background = "white";
-//?
+
+//? Erstelle SuperBalls mit verschiedenen Farbkombinationen.
 createSuperBall("superBall1", "purple", "yellow");
 createSuperBall("superBall2", "blue", "magenta");
-createSuperBall("superBall3", "orange", "red");
-createSuperBall("superBall4", "lightgreen", "orchid");
+createSuperBall("superBall3", "#22c1c3", "#fdbb2d");
+createSuperBall("superBall4", "#00e8ff", "#e835ff");
