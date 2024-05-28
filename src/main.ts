@@ -51,7 +51,9 @@
 // import "./15_exercises/bonus2";
 // import "./17_functions2/functions2";
 // import "./17_exercises/functions2";
-import "./18_modules/customer";
-import "./18_exercises/app";
-import "./18_bonus/app";
-import "./18_bonus/books";
+// import "./18_modules/customer";
+// import "./18_exercises/app";
+// import "./18_bonus/app";
+// import "./18_bonus/books";
+import "./19_cleanCode/clean-code";
+import "./19_exercises/functions";
