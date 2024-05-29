@@ -55,5 +55,7 @@
 // import "./18_exercises/app";
 // import "./18_bonus/app";
 // import "./18_bonus/books";
-import "./19_cleanCode/clean-code";
-import "./19_exercises/functions";
+// import "./19_cleanCode/clean-code";
+// import "./19_exercises/functions";
+// import "./20_oop/app";
+import "./20_exercises/app";
