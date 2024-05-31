@@ -5,7 +5,7 @@ class Driver {
   lastName: string;
   age: number;
   car: Car;
-  _licenseFromYear: number;
+  private _licenseFromYear: number;
   _carType: CarType;
 
   constructor(

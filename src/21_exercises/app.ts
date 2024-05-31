@@ -54,6 +54,10 @@ console.log(maserati);
 console.log(maserati.currentSpeed);
 maserati.currentSpeed = 40;
 console.log(maserati.currentSpeed);
+const manuel = new Driver("Manu", "Schmidt", 44, maserati, 1998, CarType.Coupe);
+console.log(manuel);
+// manuel._licenseFromYear = 1983;
+console.log(manuel);
 
 console.log(maserati.carType);
 // maserati.carType = "Sedan";
