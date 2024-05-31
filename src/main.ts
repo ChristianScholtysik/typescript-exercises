@@ -58,5 +58,6 @@
 // import "./19_cleanCode/clean-code";
 // import "./19_exercises/functions";
 // import "./20_oop/app";
-import "./20_exercises/app";
-import "./20_bonus/app";
+// import "./20_exercises/app";
+// import "./20_bonus/app";
+import "./21_exercises/app";

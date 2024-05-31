@@ -1,5 +1,7 @@
+export {};
+
 import Owner from "../20_oop/Owner";
-import Dog from "./Dog";
+import Dog from "./dog";
 import Person from "./Person";
 
 // * auch bei Objekten gibt es Methoden/Funktionen
