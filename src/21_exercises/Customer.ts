@@ -1,3 +1,5 @@
+import Validator from "./Validator";
+
 class Customer {
   _name: string;
   _email: string;
@@ -34,14 +36,21 @@ class Customer {
   get email() {
     return this._email;
   }
+  //   set email(value: string) {
+  //     if (value.includes("@") && value.includes(".")) {
+  //       this._email = value;
+  //     } else {
+  //       console.log("Invalid Email. Try again!");
+  //     }
+  //   }
+
   set email(value: string) {
-    if (value.includes("@") && value.includes(".")) {
+    if (Validator.validateEmail(value)) {
       this._email = value;
     } else {
-      console.log("Invalid Email. Try again!");
+      console.log("Invalid email format. Try again ");
     }
   }
-
   get postalCode() {
     return this._postalCode;
   }

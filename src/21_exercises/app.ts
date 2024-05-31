@@ -129,3 +129,20 @@ customer1.postalCode = 475;
 console.log(customer1);
 customer1.postalCode = 4757888965;
 console.log(customer1);
+
+//! BONUS: OOP-Class-TS-Level-3_2
+
+// Bau auf der Übung [OOP-Class-TS-Level-2_3](https://www.notion.so/OOP-Class-TS-Level-2_3-bc1ea35489934dc68ba0d9e480b314a5?pvs=21)  eine Klasse Customer auf
+
+// - erweitere die E-Mail-Prüfung mit Hilfe dieses npm Pakets https://www.npmjs.com/package/email-validator
+// - Du sollst eine eigene Klasse Validator anlegen, in der später auch noch weitere Methoden hinzukommen könnten
+// - schreibe eine statische Methode validateEmail in einer neuen Klasse Validator
+// - dort wird die Methode aus dem npm-Paket verwendet
+// - in der Klasse Customer soll dann im Setter die Methode Validator.validateEmail verwendet werden
+
+customer1.email = "tim@dsfsadasd";
+console.log(customer1);
+customer1.email = "timdsfsadasd.com";
+console.log(customer1);
+customer1.email = "tim@dsfsadasd.com";
+console.log(customer1);
