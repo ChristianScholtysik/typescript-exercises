@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(227, 227, 227);
+}
+
+.popular {
+  color: gold;
+}
+
+.IceCreamCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  margin: 10px;
+  display: inline-block;
+  text-align: center;
+  height: 16rem;
+  width: 14rem;
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(85, 85, 85);
+  font-size: 0.9rem;
+}
+
+.IceCreamCard button {
+  background-color: rgba(247, 57, 193, 0.873);
+  padding: 10px 10px;
+  border-radius: 10px;
+  border: none;
+  color: white;
+}
+
+.IceCreamCard h2 {
+  color: rgb(248, 38, 188);
+  margin: 10px 0;
+}
+
+.IceCreamCard h3 {
+  margin: 20px 0;
+}
+
+.IceCreamCard p {
+  margin: 10px 0;
+}
+
+.price {
+  font-size: 1rem;
+  font-weight: 900;
+  color: gold;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem 10rem;
+}
+
+h1 {
+  margin-bottom: 2rem;
+  color: rgb(248, 38, 188);
+}

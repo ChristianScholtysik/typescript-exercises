@@ -20,10 +20,16 @@ class IceCreamFlavor {
   }
 
   get totalPrice() {
-    const result = this.scoops * this.price;
-    return console.log(
-      `Flavor ${this.name} is popular and costs ${result} Euro.`
-    );
+    return this.scoops * this.price;
+
+    // const result = this.scoops * this.price;
+    // return console.log(
+    //   `Flavor ${this.name} is popular and costs ${result} Euro.`
+    // );
+  }
+
+  increaseScoops() {
+    this.scoops++;
   }
 }
 

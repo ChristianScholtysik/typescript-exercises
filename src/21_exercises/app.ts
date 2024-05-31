@@ -99,6 +99,87 @@ strawberry.scoops = 3;
 strawberry.totalPrice;
 strawberry.getLengthOfDescription;
 
+//! Bonus
+// - Stelle alle IceCreamFlavors als Divs im HTML mit Name, Preis und einer Kennzeichnung bei populären Eissorten (z. B. Stern) dar
+// - Pro IceCreamFlavor soll es einen Button +1 geben, mit dem man die Anzahl der Kugeln nach oben setzen kann → es soll dann jeweils die getTotalPrice-Methode der entsprechenden IceCreamFlavor-Instanz aufgerufen und das Ergebnis auch im HTML angezeigt werden
+
+const chocolate = new IceCreamFlavor("Chocolate", 3.0, false);
+const raspberry = new IceCreamFlavor("Raspberry", 2.0, true);
+const malaga = new IceCreamFlavor("Malaga", 3.2, false);
+const hazelnut = new IceCreamFlavor("Hazelnut", 2.7, true);
+const cookiesAndCream = new IceCreamFlavor("Cookies & Cream", 3.5, true);
+const coffee = new IceCreamFlavor("Coffee", 2.9, false);
+const pistachio = new IceCreamFlavor("Pistachio", 3.1, true);
+const mintChococlate = new IceCreamFlavor("Mint & Chocolate", 3.4, false);
+
+const flavors = [
+  vanilla,
+  strawberry,
+  raspberry,
+  chocolate,
+  malaga,
+  hazelnut,
+  coffee,
+  cookiesAndCream,
+  pistachio,
+  mintChococlate,
+];
+const iceCreamMenue = document.getElementById("iceCreamMenu");
+
+if (iceCreamMenue) {
+  flavors.forEach((flavor) => {
+    createIceCreamFlavorCard(flavor);
+  });
+}
+
+function createIceCreamFlavorCard(flavor: IceCreamFlavor) {
+  const card = document.createElement("div");
+  card.className = "IceCreamCard";
+
+  if (flavor.isPopular) {
+    const star = document.createElement("h3");
+    star.innerHTML = "⭐️";
+    card.appendChild(star);
+  } else {
+    const star = document.createElement("h3");
+    star.innerHTML = "❌";
+    card.appendChild(star);
+  }
+
+  const headlineElement = document.createElement("h2");
+  headlineElement.innerText = flavor.name;
+  card.appendChild(headlineElement);
+
+  const priceElement = document.createElement("p");
+  priceElement.innerText = `💰 Price: $${flavor.price.toFixed(2)}`;
+  card.appendChild(priceElement);
+
+  const scoopsElement = document.createElement("p");
+  scoopsElement.innerText = `🍨 Scoops: ${flavor.scoops}`;
+  card.appendChild(scoopsElement);
+
+  const totalPriceElement = document.createElement("p");
+  totalPriceElement.innerText = `Total Price: ${flavor.totalPrice.toFixed(
+    2
+  )} Euro`;
+  totalPriceElement.className = "price";
+  card.appendChild(totalPriceElement);
+
+  const plusButton = document.createElement("button");
+  plusButton.innerText = "+1";
+  card.appendChild(plusButton);
+
+  iceCreamMenue?.appendChild(card);
+
+  plusButton.addEventListener("click", () => {
+    flavor.increaseScoops();
+    scoopsElement.innerText = `Scoops: ${flavor.scoops}`;
+    totalPriceElement.innerText = `Total Price: ${flavor.totalPrice.toFixed(
+      2
+    )} Euro`;
+  });
+}
+
 //! OOP-Class-TS-Level-2_3
 // - Definiere eine Klasse Customer
 // - sie soll die Eigenschaften name (string), email (string), address (string), postalCode (number) und city (string) enthalten
