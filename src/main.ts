@@ -64,3 +64,4 @@
 // import "./22_exercises/app";
 // import "./23_interfaces/recap/app";
 import "./23_exercises/app";
+import "./23_bonus/app";
