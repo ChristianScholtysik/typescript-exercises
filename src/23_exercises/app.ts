@@ -12,10 +12,11 @@
 // - Außerdem gibt es die public Methode draw, die auf der Konsole “Drawing circle” ausgibt
 // - Lege drei Instanzen von Circle an, der name ist immer ‘circle’
 
-import Rectangle from "./Rectangle";
+import Rectangle from "./contracts/Rectangle";
 import Circle from "./contracts/Circle";
 import Subordinate from "./contracts/Subordinate";
-import Manager from "./manager";
+import Trainee from "./contracts/Trainee";
+import Manager from "./contracts/Manager";
 
 const circle1 = new Circle("circle1", "blue", 5);
 const circle2 = new Circle("circle2", "green", 12);
@@ -70,12 +71,32 @@ circle1.isRound();
 // - Erstelle eine Instanz der Klasse Manager
 // - Weise die Subordinates über die Methode addSubordinate dem Manager zu
 
-const subordinate1 = new Subordinate("Maria", 53, "Developer");
-const subordinate2 = new Subordinate("Franz", 28, "Developer");
-const subordinate3 = new Subordinate("Lilly", 24, "Developer");
-const subordinate4 = new Subordinate("Bernie", 44, "Designer");
+const subordinate1 = new Subordinate(
+  "Maria",
+  53,
+  "Developer",
+  new Date("2011-01-01")
+);
+const subordinate2 = new Subordinate(
+  "Franz",
+  28,
+  "Developer",
+  new Date("2004-10-12")
+);
+const subordinate3 = new Subordinate(
+  "Lilly",
+  24,
+  "Developer",
+  new Date("2004-10-12")
+);
+const subordinate4 = new Subordinate(
+  "Bernie",
+  44,
+  "Designer",
+  new Date("2023-10-12")
+);
 
-const manager = new Manager("Vera", 45, "Product Owner");
+const manager = new Manager("Vera", 45, new Date("1999-10-12"));
 
 manager.addSubordinate(subordinate1);
 manager.addSubordinate(subordinate2);
@@ -83,3 +104,29 @@ manager.addSubordinate(subordinate3);
 manager.addSubordinate(subordinate4);
 
 console.log(manager);
+
+//! OOP-Interface-TS-Level-2_2
+
+// - Wir bauen auf der Aufgabe  [OOP-Interface-TS-Level-2_1](https://www.notion.so/OOP-Interface-TS-Level-2_1-7fe3a90379e54a87abab20646e9c5061?pvs=21) auf
+
+// - Lege eine neue Datei trainee.ts an
+// - Erstelle dort eine Klasse Trainee, die das Interface IEmployee implementiert
+// - Die Position soll immer automatisch mit “Trainee” befüllt werden
+// - Lege in der app.ts zwei Instanzen der Klasse Trainee an
+// - Füge sie über addSubordinate zum Manager hinzu
+// - Erweitere das Interface IEmployee um die Eigenschaft startDate (Date) und die Methode getYearsOfService (number), die die Dienstjahre der Mitarbeitenden zum Stand heute zurückgibt
+// - Implementiere die Eigenschaft und Methode an allen nötigen Stellen
+// - Wir wollen doppelten Code für die Logik der Dienstjahresberechnung vermeiden und lagern deshalb die Methode in eine Basisklasse Employee aus
+// - Lege dazu eine neue Datei employee.ts und eine Klasse Employee, die das Interface IEmployee implementiert
+// - Die Klassen Manager, Trainee und Subordinate sollen jetzt direkt von der Klasse Employee ableiten
+
+const trainee1 = new Trainee("Marcel", 22, new Date("2024-02-15"));
+const trainee2 = new Trainee("Marco", 22, new Date("2024-02-15"));
+
+manager.addSubordinate(trainee1);
+manager.addSubordinate(trainee2);
+console.log(manager);
+console.log("Years of Service MAnager:", manager.getYearsOfService());
+console.log("Years of Service Subordinate1:", subordinate1.getYearsOfService());
+console.log("Years of Service Subordinate2:", subordinate2.getYearsOfService());
+console.log("Years of Service Trainee1:", trainee1.getYearsOfService());

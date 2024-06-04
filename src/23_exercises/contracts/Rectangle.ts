@@ -1,4 +1,4 @@
-import IShape from "./contracts/IShape";
+import IShape from "./IShape";
 
 class Rectangle implements IShape {
   name: string;
