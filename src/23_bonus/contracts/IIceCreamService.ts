@@ -1,5 +1,5 @@
 interface IIceCreamService {
-  listFlavors(): string[];
+  listFlavors: () => string[];
   orderIceCream(flavor: string, scoops: number): string;
   addNewFlavor(flavor: string): void;
   removeFlavor(flavor: string): void;

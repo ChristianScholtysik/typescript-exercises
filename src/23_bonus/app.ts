@@ -34,16 +34,24 @@ parlor.addNewFlavor(mangoIce.flavor);
 parlor.addNewFlavor(joghurtIce.flavor);
 parlor.addNewFlavor(hazelnutIce.flavor);
 parlor.addNewFlavor(vanillaIce.flavor);
-console.log(parlor.listFlavors);
+console.log(parlor.listFlavors());
 
 const vanillaIceScoops = (vanillaIce.scoops = 4);
+const mangoIceScoops = (mangoIce.scoops = 6);
+console.log(mangoIceScoops);
 console.log(vanillaIceScoops);
 console.log(parlor.orderIceCream(vanillaIce.flavor, 2));
+console.log(parlor.orderIceCream(mangoIce.flavor, 3));
 console.log(parlor.isFlavorAvailable("Mango"));
 parlor.removeFlavor("Hazelnut");
-console.log(parlor.listFlavors);
+// console.log(parlor.listFlavors());
 console.log(
   `The price for one Scoop of ${parlor.flavors[2]} is ${parlor.getFlavorPrice(
     vanillaIce.price.toString()
+  )} Euro`
+);
+console.log(
+  `The price for one Scoop of ${parlor.flavors[0]} is ${parlor.getFlavorPrice(
+    mangoIce.price.toString()
   )} Euro`
 );
