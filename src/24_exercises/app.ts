@@ -88,3 +88,28 @@ const running = new Activity("Running", 3);
 running.execute();
 
 //! OOP-Class-TS-Level-2_6
+// - Lege eine Klasse Singer an, die eine Eigenschaft name: string hat
+// - Lege 4 Klassen, die von Singer erben, die zusätzlich die Methode sing() haben, die einen String zurückgibt
+// - Setze den Namen und gib bei der Methode in jeder Klasse eine bekannte Liedzeile zurück
+
+// ```tsx
+// class Beyonce extends Singer {
+//     constructor(name: string) {
+//        super(name);
+//     }
+//     sing(): string {
+//         return "I'm a survivor, I'm gonna make it!";
+//     }
+// }
+// ```
+
+// - Lege eine Datei app.ts an
+// - Schreibe eine Function letsSing in app.ts mit einem Parameter singer
+// - Je nach Typ der Klasse soll ein passendes Emoji, das den/die Sänger:in repräsentiert, mit dem Songtext ausgegeben werden, z. B.
+
+// ```tsx
+// 👨🏻‍🦱 "Freddy Mercury" sings "We will, we will rock you."
+// ```
+
+// - Denk dir etwas aus, was ausgegeben wird, wenn kein passender Klassen-Typ gefunden wird
+// - Rufe letsSing für alle Instanzen deiner Klassen auf und lass dir das Ergebnis auf der Konsole ausgeben
