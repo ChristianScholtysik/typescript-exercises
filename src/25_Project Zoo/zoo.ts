@@ -311,6 +311,7 @@ const reptileHouseAnimals: Animal[] = [];
 
 function updateHabitats() {
   if (savanna) {
+    savanna.innerHTML = "";
     savannahHabitatAnimals.forEach((animal: Animal) => {
       const emoji = document.createTextNode(animal.emoji);
       savanna.appendChild(emoji);
