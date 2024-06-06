@@ -352,8 +352,22 @@ function updateHabitats() {
     aquaticHabitatAnimals.forEach((animal: Animal) => {
       const emoji = document.createElement("div");
       emoji.innerHTML = animal.emoji;
-      emoji.className = "Emoji";
+      emoji.className = "Emoji2";
       ocean.appendChild(emoji);
+      emoji.addEventListener("click", (event: Event) => {
+        event.preventDefault();
+        onEmojiClick();
+      });
+      function onEmojiClick() {
+        console.log(
+          `Name:${animal.name}, Year of Birth: ${animal.yearOfBirth}, Special Needs: ${animal.specialNeeds}, Continent: ${animal.continents}`
+        );
+        const card = document.createElement("div");
+        const oceanElement = document.createElement("div");
+
+        oceanElement.innerText = `${animal.name}${animal.yearOfBirth} ${animal.continents}`; //TODO: Continente in Klarnamen wandeln
+        oceanElement.appendChild(card);
+      }
     });
   }
 }
