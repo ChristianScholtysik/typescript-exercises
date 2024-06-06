@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <title>Zoo</title>
+  </head>
+  <body>
+    <div id="outerbox">
+      <h1>Neues Tier anlegen</h1>
+      <form id="animalForm">
+        <!-- Select -->
+        <label for="animalType">Tierart:</label>
+        <select id="animalType" name="animalType" required>
+          <option value="Lion">🦁 Lion</option>
+          <option value="Elephant">🐘 Elephant</option>
+          <option value="Bear">🐻 Bear</option>
+          <option value="Monkey">🐒 Monkey</option>
+          <option value="Dolphin">🐬 Dolphin</option>
+          <option value="Snake">🐍 Snake</option>
+          <option value="Turtle">🐢 Turtle</option>
+          <option value="Crocodile">🐊 Crocodile</option>
+          <option value="Parrot">🐦 Parrot</option>
+          <option value="Eagle">🦅 Eagle</option>
+          <option value="Macaw">🦜 Macaw</option>
+          <option value="Fish">🐠 Fish</option>
+          <option value="Trout">🐟 Trout</option>
+          <option value="Shark">🦈 Shark</option>
+          <option value="Octopus">🐙 Octopus</option>
+          <option value="Squid">🦑 Squid</option>
+          <option value="Frog">🐸 Frog</option>
+          <option value="Clownfish">🤡 Clownfish</option>
+          <option value="Pufferfish">🐡 Pufferfish</option>
+          <option value="Camel">🐫 Camel</option>
+          <option value="Toucan">🐦 Toucan</option>
+          <option value="Flamingo">🦢 Flamingo</option>
+        </select>
+        <!-- User individueller String -->
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <!-- Date durch User -->
+        <label for="yearOfBirth">Geburtsjahr:</label>
+        <input type="number" id="yearOfBirth" name="yearOfBirth" required />
+        <!-- Enum Select -->
+        <label for="continents">Kontinente:</label>
+        <select id="continents" name="continents" required>
+          <option value="1">Africa</option>
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="North America">North America</option>
+          <option value="South America">South America</option>
+          <option value="Australia">Australia</option>
+          <option value="Antarctica">Antarctica</option>
+        </select>
+        <!-- Userindividueller String -->
+        <label for="specialNeeds">Besondere Bedürfnisse:</label>
+        <input type="text" id="specialNeeds" name="specialNeeds" required />
+        <!-- Enum Select -->
+        <!-- <label for="enclosureId">Gehege-ID:</label>
+        <input type="text" id="enclosureId" name="enclosureId" required /> -->
+        <!-- Select Habitat -->
+        <select id="enclosureId" name="habitat">
+          <option value="1">Savanne</option>
+          <option value="JungleHabitat">Dschungel</option>
+          <option value="AquaticHabitat">Aquatisch</option>
+          <option value="ReptileHouse">Reptilienhaus</option>
+        </select>
+        <!-- Submit -->
+        <button type="submit">Tier hinzufügen</button>
+      </form>
+    </div>
+
+    <div id="output">
+      <div class="EnclosureWorld">
+        <p>Savannaworld</p>
+        <div class="box savanna"></div>
+      </div>
+      <div class="EnclosureWorld">
+        <p>Dschungelworld</p>
+        <div class="box jungle"></div>
+      </div>
+      <div class="EnclosureWorld">
+        <p>Oceanworld</p>
+        <div class="box ocean"></div>
+      </div>
+      <div class="EnclosureWorld">
+        <p>Desertworld</p>
+        <div class="box desert"></div>
+      </div>
+    </div>
+    <script type="module" src="./zoo.ts"></script>
+  </body>
+</html>
