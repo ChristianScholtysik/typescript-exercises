@@ -45,10 +45,10 @@ const specialNeeds = document.getElementById(
   "specialNeeds"
 ) as HTMLInputElement;
 const enclosureID = document.getElementById("enclosureId") as HTMLSelectElement;
-const savanna = document.querySelector(".savanna");
-const jungle = document.querySelector(".jungle");
-const ocean = document.querySelector(".ocean");
-const desert = document.querySelector(".desert");
+const savanna = document?.querySelector(".savanna");
+const jungle = document?.querySelector(".jungle");
+const ocean = document?.querySelector(".ocean");
+const desert = document?.querySelector(".desert");
 
 function createAnimal(
   type: string,
@@ -289,12 +289,16 @@ animalForm?.addEventListener("submit", (event: Event) => {
   );
   if (animal.enclosureId === EnclosureId.AquaticHabitat) {
     aquaticHabitatAnimals.push(animal);
+    console.log("Added to aquatic:", animal);
   } else if (animal.enclosureId === EnclosureId.JungleHabitat) {
     jungleHabitatAnimals.push(animal);
+    console.log("Added to jungleHabitatAnimals:", animal);
   } else if (animal.enclosureId === EnclosureId.SavannahHabitat) {
     savannahHabitatAnimals.push(animal);
+    console.log("Added to savannaHabitatAnimals:", animal);
   } else if (animal.enclosureId === EnclosureId.ReptileHouse) {
     reptileHouseAnimals.push(animal);
+    console.log("Added to reptileHabitatAnimals:", animal);
   }
   allAnimals.push(animal);
   console.log(allAnimals);
@@ -310,26 +314,45 @@ const aquaticHabitatAnimals: Animal[] = [];
 const reptileHouseAnimals: Animal[] = [];
 
 function updateHabitats() {
-  if (savanna) {
+  const savanna = document?.querySelector(".savanna");
+  const jungle = document?.querySelector(".jungle");
+  const ocean = document?.querySelector(".ocean");
+  const desert = document?.querySelector(".desert");
+
+  if (savanna && EnclosureId.SavannahHabitat) {
     savanna.innerHTML = "";
     savannahHabitatAnimals.forEach((animal: Animal) => {
-      const emoji = document.createTextNode(animal.emoji);
+      const emoji = document.createElement("div");
+      emoji.innerHTML = animal.emoji;
+      emoji.className = "Emoji2";
       savanna.appendChild(emoji);
     });
-  } else if (jungle) {
+  }
+  if (jungle && EnclosureId.JungleHabitat) {
+    jungle.innerHTML = "";
     jungleHabitatAnimals.forEach((animal: Animal) => {
-      const emoji = document.createTextNode(animal.emoji);
+      const emoji = document.createElement("div");
+      emoji.innerHTML = animal.emoji;
+      emoji.className = "Emoji";
       jungle.appendChild(emoji);
     });
-  } else if (desert) {
+  }
+
+  if (desert) {
+    desert.innerHTML = "";
     reptileHouseAnimals.forEach((animal: Animal) => {
-      const emoji = document.createTextNode(animal.emoji);
+      const emoji = document.createElement("div");
+      emoji.innerHTML = animal.emoji;
+      emoji.className = "Emoji2";
       desert.appendChild(emoji);
     });
-  } else if (ocean) {
+  }
+  if (ocean) {
     ocean.innerHTML = "";
     aquaticHabitatAnimals.forEach((animal: Animal) => {
-      const emoji = document.createTextNode(animal.emoji);
+      const emoji = document.createElement("div");
+      emoji.innerHTML = animal.emoji;
+      emoji.className = "Emoji";
       ocean.appendChild(emoji);
     });
   }

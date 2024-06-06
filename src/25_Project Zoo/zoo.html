@@ -9,7 +9,7 @@
   <body>
     <div id="outerbox">
       <h1>Neues Tier anlegen</h1>
-      <form id="animalForm">
+      <form id="animalForm" class="container">
         <!-- Select -->
         <label for="animalType">Tierart:</label>
         <select id="animalType" name="animalType" required>
@@ -41,17 +41,23 @@
         <input type="text" id="name" name="name" required />
         <!-- Date durch User -->
         <label for="yearOfBirth">Geburtsjahr:</label>
-        <input type="number" id="yearOfBirth" name="yearOfBirth" required />
+        <input
+          type="number"
+          id="yearOfBirth"
+          name="yearOfBirth"
+          min="1980"
+          max="2024"
+          required />
         <!-- Enum Select -->
         <label for="continents">Kontinente:</label>
         <select id="continents" name="continents" required>
           <option value="1">Africa</option>
-          <option value="Asia">Asia</option>
-          <option value="Europe">Europe</option>
-          <option value="North America">North America</option>
-          <option value="South America">South America</option>
-          <option value="Australia">Australia</option>
-          <option value="Antarctica">Antarctica</option>
+          <option value="2">Asia</option>
+          <option value="3">Europe</option>
+          <option value="4">North America</option>
+          <option value="5">South America</option>
+          <option value="6">Australia</option>
+          <option value="7">Antarctica</option>
         </select>
         <!-- Userindividueller String -->
         <label for="specialNeeds">Besondere Bedürfnisse:</label>
@@ -62,9 +68,9 @@
         <!-- Select Habitat -->
         <select id="enclosureId" name="habitat">
           <option value="1">Savanne</option>
-          <option value="JungleHabitat">Dschungel</option>
-          <option value="AquaticHabitat">Aquatisch</option>
-          <option value="ReptileHouse">Reptilienhaus</option>
+          <option value="2">Dschungel</option>
+          <option value="3">Aquatisch</option>
+          <option value="4">Reptilienhaus</option>
         </select>
         <!-- Submit -->
         <button type="submit">Tier hinzufügen</button>
@@ -77,7 +83,7 @@
         <div class="box savanna"></div>
       </div>
       <div class="EnclosureWorld">
-        <p>Dschungelworld</p>
+        <p>Jungleworld</p>
         <div class="box jungle"></div>
       </div>
       <div class="EnclosureWorld">

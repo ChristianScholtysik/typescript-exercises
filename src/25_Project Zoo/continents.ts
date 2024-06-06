@@ -1,11 +1,11 @@
 enum Continents {
   Africa = 1,
-  Asia = "Asia",
-  Europe = "Europe",
-  NorthAmerica = "North America",
-  SouthAmerica = "South America",
-  Australia = "Australia",
-  Antarctica = "Antarctica",
+  Asia = 2,
+  Europe = 3,
+  NorthAmerica = 4,
+  SouthAmerica = 5,
+  Australia = 6,
+  Antarctica = 7,
 }
 
 export default Continents;
