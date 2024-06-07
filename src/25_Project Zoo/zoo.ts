@@ -365,8 +365,12 @@ function updateHabitats() {
         const currentYear = new Date().getFullYear();
         const birthYear = animal.yearOfBirth;
         const age = currentYear - birthYear;
+
         const card = document.createElement("div");
         card.className = "ResultCard";
+        const emojiText = document.createElement("h1");
+        emojiText.innerText = ` ${animal.emoji} `;
+        card.appendChild(emojiText);
         const infoText = document.createElement("h3");
         infoText.innerText = `Name: ${animal.name}, Year of Birth: ${animal.yearOfBirth}`;
         card.appendChild(infoText);
@@ -374,7 +378,7 @@ function updateHabitats() {
         ageText.innerText = `Age: ${age} years`;
         card.appendChild(ageText);
         const continentText = document.createElement("p");
-        continentText.innerText = `Special Needs: ${animal.specialNeeds}, Continent: ${animal.continents}`; //TODO: Continente in Klarnamen wandeln
+        continentText.innerText = `Special Needs: ${animal.specialNeeds}, Continent: ${animal.continents}`;
         card.appendChild(continentText);
         resultFieldElement?.appendChild(card);
         console.log(
