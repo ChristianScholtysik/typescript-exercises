@@ -45,6 +45,7 @@ const specialNeeds = document.getElementById(
   "specialNeeds"
 ) as HTMLInputElement;
 const enclosureID = document.getElementById("enclosureId") as HTMLSelectElement;
+const resultFieldElement = document.getElementById("resultSectionElement");
 const savanna = document?.querySelector(".savanna");
 const jungle = document?.querySelector(".jungle");
 const ocean = document?.querySelector(".ocean");
@@ -302,7 +303,6 @@ animalForm?.addEventListener("submit", (event: Event) => {
   }
   allAnimals.push(animal);
   console.log(allAnimals);
-  console.log(jungleHabitatAnimals);
 
   updateHabitats();
 });
@@ -359,14 +359,27 @@ function updateHabitats() {
         onEmojiClick();
       });
       function onEmojiClick() {
+        if (resultFieldElement) {
+          resultFieldElement.innerHTML = "";
+        }
+        const currentYear = new Date().getFullYear();
+        const birthYear = animal.yearOfBirth;
+        const age = currentYear - birthYear;
+        const card = document.createElement("div");
+        card.className = "ResultCard";
+        const infoText = document.createElement("h3");
+        infoText.innerText = `Name: ${animal.name}, Year of Birth: ${animal.yearOfBirth}`;
+        card.appendChild(infoText);
+        const ageText = document.createElement("p");
+        ageText.innerText = `Age: ${age} years`;
+        card.appendChild(ageText);
+        const continentText = document.createElement("p");
+        continentText.innerText = `Special Needs: ${animal.specialNeeds}, Continent: ${animal.continents}`; //TODO: Continente in Klarnamen wandeln
+        card.appendChild(continentText);
+        resultFieldElement?.appendChild(card);
         console.log(
           `Name:${animal.name}, Year of Birth: ${animal.yearOfBirth}, Special Needs: ${animal.specialNeeds}, Continent: ${animal.continents}`
         );
-        const card = document.createElement("div");
-        const oceanElement = document.createElement("div");
-
-        oceanElement.innerText = `${animal.name}${animal.yearOfBirth} ${animal.continents}`; //TODO: Continente in Klarnamen wandeln
-        oceanElement.appendChild(card);
       }
     });
   }

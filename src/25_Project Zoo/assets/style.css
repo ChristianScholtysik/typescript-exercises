@@ -170,3 +170,19 @@ button[type="submit"]:hover {
 p {
   text-align: center;
 }
+
+.ResultCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  background-color: #ffffff;
+  font-size: 0.6rem;
+  height: 100px;
+  width: 100px;
+  padding: 20px 20px;
+  margin: 50px 50px;
+  border-radius: 10px;
+  text-align: center;
+}
