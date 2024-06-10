@@ -67,4 +67,6 @@
 // import "./23_bonus/app";
 // import "./24_exercises/app";
 // import "./24_Pair-Programming/app";
-import "./25_Project Zoo/zoo";
+// import "./25_Project Zoo/zoo";
+// import "./27_types_errors/casting";
+import "./27_exercises/app";
