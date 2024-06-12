@@ -71,4 +71,7 @@
 // import "./27_types_errors/casting";
 // import "./27_exercises/app";
 // import "./27_bonus/app";
-import "./28_exercises/app";
+// import "./28_exercises/app";
+import "./29_exercises/app";
+import "./29_exercises/max";
+import "./29_exercises/add-numbers";
