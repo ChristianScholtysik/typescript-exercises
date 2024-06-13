@@ -1,4 +1,4 @@
-const numberMethodsPromise: Promise<number[]> = new Promise<number[]>(
+const numberMethodsPromise: Promise<number[]> = new Promise(
   (resolve, reject) => {
     let randomNumbersArray: number[] = [];
     for (let i = 0; i < 3; i++) {
@@ -6,7 +6,7 @@ const numberMethodsPromise: Promise<number[]> = new Promise<number[]>(
       randomNumbersArray.push(generateRandomNumber);
 
       if (generateRandomNumber > 100) {
-        reject("Error: Not greater than 100");
+        reject("Not greater than 100");
         return;
       }
     }
