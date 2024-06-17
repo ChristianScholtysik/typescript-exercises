@@ -78,4 +78,6 @@
 // import "./30_exercises/app";
 // import "./30_exercises/she-loves-me";
 // import "./30_exercises/forecast";
-import "./30_exercises/number-methods";
+// import "./30_exercises/number-methods";
+import "./31_exercises/greeting";
+import "./31_exercises/homework";
