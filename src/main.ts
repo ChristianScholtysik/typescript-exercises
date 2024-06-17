@@ -83,4 +83,5 @@
 // import "./31_exercises/homework";
 // import "./32_exercises/fetch-picsum";
 // import "./32_exercises/placeholder-api";
-import "./32_exercises/picsum";
+// import "./32_exercises/picsum";
+import "./32_bonus/api";

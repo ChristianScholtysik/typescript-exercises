@@ -1,0 +1,59 @@
+main {
+  background-color: rgb(216, 216, 216);
+  display: flex;
+  flex-direction: column;
+}
+
+#gallery-countries {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 50px;
+  margin: 0 auto;
+}
+.img {
+  width: 100%;
+  border: solid 1px grey;
+}
+.div {
+  margin: 20px 20px;
+  padding: 20px 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 20px;
+}
+
+p {
+  font-size: 1.1rem;
+  color: black;
+}
+#form {
+  display: flex;
+  flex-direction: column;
+  margin: 2% 30%;
+}
+
+input[type="search"] {
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+h1 {
+  color: #067597;
+  text-align: center;
+}
+
+button {
+  padding: 10px;
+  background-color: #067597;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0f8fa9;
+}
