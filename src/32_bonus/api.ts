@@ -120,35 +120,56 @@ function displayCountries(countries: Country[]) {
     img.alt = country.name.official;
     const capital = document.createElement("p");
     capital.innerHTML = `Capital: ${country.capital}`;
-    const population = document.createElement("p");
+
     const language = document.createElement("p");
+    language.className = "p-grey";
     language.textContent = `Language: ${Object.values(country.languages).join(
       ", "
     )}`;
-
+    const population = document.createElement("p");
     population.innerHTML = `Population: ${country.population.toString()} inhabitants`;
+    const demonym = document.createElement("p");
+    demonym.className = "p-grey";
+    demonym.textContent = `Demonym: ${Object.values(
+      country.demonyms.eng.f
+    ).join(" ")} `;
     const region = document.createElement("p");
+
     region.innerHTML = `Region: ${country.region}`;
     const subRegion = document.createElement("p");
+    subRegion.className = "p-grey";
     subRegion.innerHTML = `Subregion: ${country.subregion}`;
     const currency = document.createElement("p");
+
     const currencies = Object.values(country.currencies);
     if (currencies.length > 0) {
       currency.textContent = `Currency: ${currencies[0].name} (${currencies[0].symbol})`;
     }
 
     const carSigns = document.createElement("p");
+    carSigns.className = "p-grey";
     carSigns.innerHTML = `Car Sign: ${country.car.signs} `;
+    // const mapRegion = document.createElement("href");
+    // mapRegion.className = "country-map";
+    // mapRegion.innerText = country.maps.openStreetMaps;
+    // mapRegion.alt = `Map of ${country.name.official}`;
+    const regionLinkMap = document.createElement("a");
+    regionLinkMap.className = "country-map";
+    regionLinkMap.innerText = `Link to map`;
+    regionLinkMap.href = country.maps.openStreetMaps;
+    regionLinkMap.target = "_blank";
 
     divElement.appendChild(headline);
     divElement.appendChild(img);
     divElement.appendChild(capital);
     divElement.appendChild(language);
     divElement.appendChild(population);
+    divElement.appendChild(demonym);
     divElement.appendChild(region);
     divElement.appendChild(subRegion);
     divElement.appendChild(currency);
     divElement.appendChild(carSigns);
+    divElement.appendChild(regionLinkMap);
     gallery.appendChild(divElement);
   });
 }
