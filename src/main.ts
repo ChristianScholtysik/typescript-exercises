@@ -79,5 +79,8 @@
 // import "./30_exercises/she-loves-me";
 // import "./30_exercises/forecast";
 // import "./30_exercises/number-methods";
-import "./31_exercises/greeting";
-import "./31_exercises/homework";
+// import "./31_exercises/greeting";
+// import "./31_exercises/homework";
+// import "./32_exercises/fetch-picsum";
+// import "./32_exercises/placeholder-api";
+import "./32_exercises/picsum";

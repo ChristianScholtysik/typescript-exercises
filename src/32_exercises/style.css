@@ -1,0 +1,12 @@
+.img {
+  width: 100%;
+}
+.figure {
+  margin: 10px 10px;
+}
+#gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 0 auto;
+}

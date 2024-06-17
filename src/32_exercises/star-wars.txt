@@ -1,0 +1,19 @@
+- Wie lange hat der Aufruf gedauert?:  112ms
+- Wieviele Planeten bekommst du als Antwort?: 60 Planeten
+- Wie lautet der Name des vorletzten Planeten?: Coruscant
+- Wie ist das Klima (climate) des Planten Hoth?:  "climate": "frozen",
+- Versuche selbst, die 3. Seite (page=3) aufzurufen.
+    - Wie lautet der Name des zweiten Planeten auf dieser Seite?:  Corelia
+
+  Star Wars People
+  - Wer ist die erste Person in der Antwort?: Luke Skywalker
+- Rufe sein Raumschiff ab - wie heißt es?: X-wing
+- Wie lautet die Haarfarbe und die Augenfarbe der letzten Person aus der Antwort?:      "hair_color": "auburn, white",
+            "eye_color": "blue-gray",
+- Rufe die Seite 3 ab.
+    - Wer steht dort ganz oben?: Boba Fett
+    - In welchen Filmen kommt die Person vor?: "The Empire Strikes Back","Return of the Jedi","Attack of the Clones"
+- Suche nach Prinzessin Leia.
+Wie man einen Suchtext im Request mitgeben kann, findest du in der [Dokumentation](https://swapi.dev/documentation)
+    - Wie groß ist sie?: "150",
+    - Was ist ihr Heimatplanet?: Alderaan
