@@ -82,7 +82,7 @@ interface Country {
 const searchField = document.getElementById("search-field") as HTMLInputElement;
 const searchButton = document.getElementById("search-button");
 
-//?--------------
+//* fetch
 function fetchAllCountries() {
   fetch("https://restcountries.com/v3.1/all")
     .then((response: Response) => {
@@ -102,9 +102,10 @@ function fetchAllCountries() {
       console.log("Done with fetching all countries");
     });
 }
-
+//*
 fetchAllCountries();
 
+//*
 function displayCountries(countries: Country[]) {
   const gallery = document.getElementById("gallery-countries");
   if (!gallery) return;
@@ -152,13 +153,14 @@ function displayCountries(countries: Country[]) {
   });
 }
 
-//?--------------
+//* Event Listener:
 searchButton?.addEventListener("click", (event: Event) => {
   event.preventDefault();
   const gallery = document.getElementById("gallery-countries");
   const searchValue = searchField.value.trim().toLowerCase();
   if (searchValue === "") {
     fetchAllCountries();
+    return;
   }
   fetch(`https://restcountries.com/v3.1/name/${searchValue}`)
     .then((response: Response) => {
@@ -182,4 +184,13 @@ searchButton?.addEventListener("click", (event: Event) => {
     .finally(() => {
       console.log("Done with fetching the searchValue");
     });
+});
+
+//* refetch all countries when searchField is cleared
+searchField.addEventListener("input", () => {
+  const searchValue = searchField.value.trim().toLowerCase();
+
+  if (searchValue === "") {
+    fetchAllCountries();
+  }
 });
