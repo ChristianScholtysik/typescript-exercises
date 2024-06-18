@@ -2,6 +2,7 @@ main {
   background-color: rgb(216, 216, 216);
   display: flex;
   flex-direction: column;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 #gallery-countries {
@@ -12,7 +13,8 @@ main {
 }
 .img {
   width: 100%;
-  border: solid 1px grey;
+  border: solid 1px rgb(209, 209, 209);
+  margin-bottom: 10px;
 }
 
 .country-map {
@@ -37,6 +39,7 @@ main {
 }
 
 p {
+  margin: 8px 0 8px 0;
   font-size: 1.1rem;
   color: black;
 }
