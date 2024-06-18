@@ -26,6 +26,9 @@ main {
   text-decoration: none;
 }
 .div {
+  display: flex;
+  flex-direction: column;
+
   margin: 20px 20px;
   padding: 20px 20px;
   background-color: rgb(255, 255, 255);
@@ -72,4 +75,8 @@ button[type="submit"]:hover {
 .p-grey {
   padding: 5px 5px;
   background-color: rgb(214, 214, 214);
+}
+.coat {
+  width: 30%;
+  margin: 0 0 20px 80px;
 }

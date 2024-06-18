@@ -132,7 +132,7 @@ function displayCountries(countries: Country[]) {
     demonym.className = "p-grey";
     demonym.textContent = `Demonym: ${Object.values(
       country.demonyms.eng.f
-    ).join(" ")} `;
+    ).join("")} `;
     const region = document.createElement("p");
 
     region.innerHTML = `Region: ${country.region}`;
@@ -149,6 +149,12 @@ function displayCountries(countries: Country[]) {
     const carSigns = document.createElement("p");
     carSigns.className = "p-grey";
     carSigns.innerHTML = `Car Sign: ${country.car.signs} `;
+    const coatOfArms = document.createElement("img");
+    coatOfArms.className = "coat";
+    const coatOfArmsSource = country.coatOfArms.png;
+    coatOfArms.src = coatOfArmsSource;
+    coatOfArms.alt = `Coat of Arms of ${country.name.official}`;
+
     // const mapRegion = document.createElement("href");
     // mapRegion.className = "country-map";
     // mapRegion.innerText = country.maps.openStreetMaps;
@@ -169,6 +175,7 @@ function displayCountries(countries: Country[]) {
     divElement.appendChild(subRegion);
     divElement.appendChild(currency);
     divElement.appendChild(carSigns);
+    divElement.appendChild(coatOfArms);
     divElement.appendChild(regionLinkMap);
     gallery.appendChild(divElement);
   });
