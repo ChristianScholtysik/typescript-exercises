@@ -29,6 +29,7 @@ main {
   display: flex;
   flex-direction: column;
 
+  text-align: left;
   margin: 20px 20px;
   padding: 20px 20px;
   background-color: rgb(255, 255, 255);
@@ -77,6 +78,7 @@ button[type="submit"]:hover {
   background-color: rgb(214, 214, 214);
 }
 .coat {
-  width: 30%;
-  margin: 0 0 20px 80px;
+  height: auto;
+  width: 40%;
+  margin: 0 0 20px 90px;
 }

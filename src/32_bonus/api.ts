@@ -153,7 +153,7 @@ function displayCountries(countries: Country[]) {
     coatOfArms.className = "coat";
     const coatOfArmsSource = country.coatOfArms.png;
     coatOfArms.src = coatOfArmsSource;
-    coatOfArms.alt = `Coat of Arms of ${country.name.official}`;
+    coatOfArms.alt = ``;
 
     // const mapRegion = document.createElement("href");
     // mapRegion.className = "country-map";
