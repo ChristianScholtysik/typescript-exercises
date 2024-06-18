@@ -86,3 +86,4 @@
 // import "./32_exercises/picsum";
 // import "./32_bonus/api";
 import "./33_exercises/fetch-todos";
+import "./33_exercises/pokemon.ts";
