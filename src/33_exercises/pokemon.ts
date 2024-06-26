@@ -52,7 +52,7 @@ function fetchPokemonList(): Promise<IPokemon[]> {
 }
 
 function fetchPokemonData(pokemon: IPokemon): Promise<void> {
-  return fetch("https://pokeapi.co/api/v2/pokemon/?limit=151")
+  return fetch("https://pokeapi.co/api/v2/pokemon/")
     .then((response) => {
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -60,7 +60,13 @@ function fetchPokemonData(pokemon: IPokemon): Promise<void> {
       return response.json();
     })
     .then((data) => {
-      console.log(`Pokemon ${pokemon.name} data:`, data);
+      // console.log(`${[data]}`);
+      const test = Object.values(data);
+      // console.log(test);
+      test.forEach((pokemon) => {
+        console.log(pokemon);
+      });
+      // console.log(`Pokemon ${pokemon.name} data:`, data);
     })
     .catch((error) => {
       console.error(`Error fetching data for ${pokemon.name}:`, error);
@@ -80,13 +86,22 @@ function mainFetch() {
           pokeContainer.className = "container";
           let pokeName = document.createElement("h4");
           pokeName.innerHTML = pokemon.name.toLocaleUpperCase();
-          //   let pokemonId = document.createElement("p");
-          //   pokemonId.innerHTML = `${pokemon.base_experience}`;
+          let pokemonHeight = document.createElement("p");
+          pokemonHeight.innerHTML = `${pokemon.height}`;
+          // let pokemonWeight = document.createElement("p");
+          // const weight = pokemon.weight;
+          // console.log(weight);
+          // pokemonWeight.innerHTML = `${weight}`;
           let pokeImage = document.createElement("img");
           pokeImage.className = "img";
           pokeImage.src = `https://img.pokemondb.net/artwork/${pokemon.name}.jpg`;
 
-          pokeContainer.append(pokeName, pokeImage);
+          pokeContainer.append(
+            pokeName,
+            pokemonHeight,
+            // pokemonWeight,
+            pokeImage
+          );
 
           allPokemonContainer.appendChild(pokeContainer);
         }
