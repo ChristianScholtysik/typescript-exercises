@@ -94,6 +94,9 @@ function displayQuestion(): void {
                             <form id="answer-form">
                               ${answersHtml}
                               <button type="submit">Submit Answer</button>
+                            <div id="questionTimer">Question ${
+                              currentQuestionIndex + 1
+                            } of ${questions.length} questions </div>
                             </form>
                             <div id="feedback"></div>
                           </div>`;
@@ -120,12 +123,14 @@ function handleAnswerSubmit(event: Event): void {
 
     const feedback = document.getElementById("feedback");
     if (feedback) {
-      feedback.innerHTML = isCorrect ? "Correct!" : "Wrong!";
+      feedback.innerHTML = isCorrect
+        ? '<div id="feedback-correct">Correct</div> '
+        : '<div id="feedback-wrong">Wrong</div> ';
     }
 
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
-      setTimeout(displayQuestion, 2000);
+      setTimeout(displayQuestion, 1000);
     } else {
       displayFinalScore();
     }
