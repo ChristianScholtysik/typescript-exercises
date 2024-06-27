@@ -87,10 +87,11 @@
 // import "./32_bonus/api";
 // import "./33_exercises/fetch-todos";
 // import "./33_exercises/pokemon.ts";
-import "./37_exercises/main";
-import "./38_exercises/partial-books";
-import "./38_exercises/basic-book";
-import "./38_exercises/book-description";
-import "./38_exercises/readonly-book";
-import "./38_exercises/Colors";
-import "./38_exercises/tea";
+// import "./37_exercises/main";
+// import "./38_exercises/partial-books";
+// import "./38_exercises/basic-book";
+// import "./38_exercises/book-description";
+// import "./38_exercises/readonly-book";
+// import "./38_exercises/Colors";
+// import "./38_exercises/tea";
+import "./39_exercises/app";
